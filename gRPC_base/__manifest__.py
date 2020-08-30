@@ -5,6 +5,7 @@
     'author': 'khangnguyen16021990@gmail.com',
     'description': 'Simple Module implement gRPC in Odoo',
     "license": "LGPL-3",
+    "website": "https://github.com/khangsg/odoo-grpc",
     'depends': [
         'base',
         'product'
