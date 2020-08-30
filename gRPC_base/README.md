@@ -1,6 +1,4 @@
-===========
-USING gRPC IN ODOO
-=========
+## USING gRPC IN ODOO
 
 The simple guide: how to get Odoo product from nodejs using gRPC.
 
