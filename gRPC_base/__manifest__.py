@@ -3,7 +3,8 @@
     'name': 'gRPC Base',
     'category': 'Base gRPC for Odoo',
     'author': 'khangnguyen16021990@gmail.com',
-    'description': '',
+    'description': 'Simple Module implement gRPC in Odoo',
+    "license": "LGPL-3",
     'depends': [
         'base',
         'product'
