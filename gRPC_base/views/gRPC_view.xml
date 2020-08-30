@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_grpc_server_ui_form" model="ir.ui.view">
+        <field name="name">view_grpc_server_ui_form</field>
+        <field name="model">grpc.server.uid</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start" string="Start" type="object" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <div clas="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group><field name="listen_port"/></group>
+                        <group></group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_grpc_server_ui_tree" model="ir.ui.view">
+        <field name="name">view_grpc_server_ui_tree</field>
+        <field name="model">grpc.server.uid</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" required="1" attrs="{'readonly': [('state', '=', 'running')]}"/>
+                <field name="listen_port" required="1" attrs="{'readonly': [('state', '=', 'running')]}"/>
+                <button name="action_start" string="Start" type="object" class="float-right" icon="fa-play"
+                attrs="{'invisible': [('state', '=', 'running')]}"/>
+                <button name="action_stop" string="Stop" type="object" class="float-right" icon="fa-stop"
+                attrs="{'invisible': [('state', '=', 'stopped')]}"/>
+                <field name="state" invisible="1"/>
+                <field name="create_date" readonly="1"/>
+                <field name="create_uid" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_view_grpc_server_ui_tree" model="ir.actions.act_window">
+        <field name="name">GRPC Server</field>
+        <field name="res_model">grpc.server.uid</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_grpc_server_ui_tree"/>
+        <field name="context">{}</field>
+    </record>
+    <menuitem
+        id="menu_action_view_grpc_server_ui_tree"
+        parent="base.menu_administration"
+        name="GRPC Server"
+        action="action_view_grpc_server_ui_tree"
+        sequence="110"/>
+</odoo>

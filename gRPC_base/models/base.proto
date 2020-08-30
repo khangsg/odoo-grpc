@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Products {
+  rpc GetProductInfo(ProductRequest) returns (ProductResponse);
+}
+
+message ProductRequest {
+  int32 product_id = 1;
+}
+
+message ProductResponse {
+  string name = 1;
+  string public_price = 2;
+}
