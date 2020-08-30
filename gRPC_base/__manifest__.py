@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'gRPC Base',
+    'name': 'Get/set Odoo Data from javascript using gRPC',
     'category': 'Base gRPC for Odoo',
     'author': 'khangnguyen16021990@gmail.com',
     'description': 'Simple Module implement gRPC in Odoo',
