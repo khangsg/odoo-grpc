@@ -31,9 +31,9 @@ pip install -r requirements.txt
 ## Request product data from nodejs
 
 ```
-1. cd to gRPC_base/client
+1. Type command: <cd to gRPC_base/client>
 2. Edit client.js file and add product_id that you want to get data (Line 11)
-3. Type: <node client.js>
+3. Type command: <node client.js>
 ```
 
 
