@@ -2,10 +2,10 @@
 {
     'name': 'Get Odoo data from javascript using gRPC',
     'category': 'Base gRPC for Odoo',
-    'author': 'khangnguyen16021990@gmail.com',
+    'author': 'KhangSG Solutions',
     'description': 'Simple Module implement gRPC in Odoo',
-    "license": "LGPL-3",
-    "website": "https://github.com/khangsg/odoo-grpc",
+    "license": "AGPL-3",
+    "website": "https://odoo-vn.com",
     'depends': [
         'base',
         'product'
